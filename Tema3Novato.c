@@ -109,33 +109,71 @@ int main(){
 
     //Carta 1 vs Carta 2
     printf("CARTA 1 VS CARTA 2\nAtributo: População\n");
-    printf("Carta 1 - Fortaleza: %lu\n", populacao1);
-    printf("Carta 2 - Betim: %lu\n", populacao2);
+    printf("Carta 1 - Fortaleza: %lu habitantes\n", populacao1);
+    printf("Carta 2 - Betim: %lu habitantes\n", populacao2);
     if(populacao1 > populacao2) {
         printf("Carta 1 venceu!\n"); 
     } else {
         printf("Carta 2 venceu\n"); 
     }
     
-    printf("Área x Área: %d\n", area1_km > area2_km); 
-    printf("Carta 2 venceu!\n"); 
+    printf("Atributo: Área\n");
+    printf("Carta 1 - Fortaleza: %.2f km²\n", area1_km); 
+    printf("Carta 2 - Betim: %.2f km²\n", area2_km); 
+    if (area1_km > area2_km) {
+        printf("Carta 1 venceu!\n");
+    } else {
+        printf("Carta 2 venceu!\n");
+    }
 
-    printf("PIB x PIB: %d\n", pib1 > pib2); 
-    printf("Carta 1 venceu!\n");
+    printf("Atributo: PIB: \n"); 
+    printf("Carta 1 - Fortaleza: %.2f bilhões\n", pib1);
+    printf("Carta 2 - Betim: R$%.2f bilhões\n", pib2);
+    if (pib1 > pib2) {
+        printf("Carta 1 venceu!\n");
+    } else {
+        printf("Carta 2 venceu!\n"); 
+    }
 
-    printf("Pontos turísticos x Pontos turísticos: %d\n", pontos_turisticos1 > pontos_turisticos2); 
-    printf("Carta 1 venceu!\n"); 
+  
+    printf("Atributo: Pontos turísticos: \n"); 
+    printf("Carta 1 - Fortaleza: %d\n", pontos_turisticos1); 
+    printf("Carta 1 - Betim: %d\n", pontos_turisticos2); 
+    if (pontos_turisticos1 > pontos_turisticos2) {
+        printf("Carta 1 venceu!\n"); 
+    } else {
+        printf("Carta 2 venceu!\n"); 
+    }
 
-    printf("Densidade populacional vs Densidade Populacional: %d\n", densidade1 < densidade2);
-    printf("CARTA 2 VENCEU!\n"); 
+    printf("Atributo: Densidade populacional: \n"); 
+    printf("Carta 1 - Fortaleza: %.2f hab/km²\n", densidade1); 
+    printf("Carta 1 - Betim: %.2f hab/km²\n", densidade2); 
+    if (densidade1 < densidade2) {
+        printf("Carta 1 venceu!\n"); 
+    } else {
+        printf("Carta 2 venceu\n"); 
+    }
 
-    printf("PIB per Capita vs PIB per Capita: %d\n", pib1_capita > pib2_capita); 
-    printf("Carta 2 venceu!\n"); 
-      
+    printf("Atributo: PIB per Capita:\n");
+    printf("Carta 1 - Fortaleza: R$%.2f\n", pib1_capita);
+    printf("Carta 1 - Betim: R$%.2f\n", pib2_capita);
+    if (pib1_capita > pib2_capita) {
+        printf("Carta 1 venceu!\n"); 
+    } else {
+        printf("Carta 2 venceu!\n"); 
+    }
+
     float superPoder1 = populacao1 + area1_km + pib1 + pontos_turisticos1 + pib1_capita + (1.0f / densidade1);  
     float superPoder2 = populacao2 + area2_km + pib2 + pontos_turisticos2 + pib2_capita + (1.0f / densidade2);
-    printf("Super poder vs Super poder: %d\n", superPoder1 > superPoder2);
-    printf("Carta 1 venceu!"); 
+
+    printf("Atributo: Super Poder:\n"); 
+    printf("Carta 1 - Fortaleza: %.2f\n", superPoder1);
+    printf("Carta 1 - Betim: %.2f\n", superPoder2);
+    if (superPoder1 > superPoder2) {
+        printf("Carta 1 venceu!\n"); 
+    } else {
+        printf("Carta 2 venceu!\n"); 
+    }
 
     return 0; 
 
